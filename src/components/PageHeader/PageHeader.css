@@ -1,0 +1,16 @@
+.page-header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffe6cc;
+  }
+  
+  .page-header h1 {
+    font-size: 36px;
+    color: #ff6600;
+  }
+  
+  .page-header p {
+    font-size: 16px;
+    color: #555555;
+  }
+  

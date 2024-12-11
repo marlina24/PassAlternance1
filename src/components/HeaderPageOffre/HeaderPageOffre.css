@@ -1,0 +1,16 @@
+.header-page-offre {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffe6cc;
+  }
+  
+  .header-page-offre h1 {
+    font-size: 36px;
+    color: #ff6600;
+  }
+  
+  .header-page-offre p {
+    font-size: 16px;
+    color: #555555;
+  }
+  

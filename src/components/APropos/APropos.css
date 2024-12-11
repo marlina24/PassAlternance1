@@ -1,0 +1,59 @@
+.apropos-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%; /* Définit la largeur à 70% */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+}
+  .apropos-row {
+    display: flex;
+    align-items: center;
+    background-color: white;
+  }
+  
+  .apropos-image, .apropos-text {
+    flex: 1; /* Les images et les textes prennent la même largeur */
+    max-width: 50%; /* Empêche qu'une colonne dépasse 50% de la largeur */
+  }
+  
+  .apropos-image {
+    width: 300px;
+    height: auto;
+  }
+  
+  .apropos-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+  
+  .apropos-text h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    margin: 20px;
+  }
+  
+  .apropos-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    margin-left: 20px;
+  }
+  
+  .apropos-link {
+    color: #272a2e;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+margin-left: 20px;
+  }
+  
+  .apropos-link:hover {
+    text-decoration: underline;
+  }
+  .aproposTitre{
+    text-align: center;
+    color: #ff6600;
+    font-size: 45px;
+    margin-bottom: 80px;
+  }

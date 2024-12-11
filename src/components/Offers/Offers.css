@@ -1,0 +1,47 @@
+.offers-section {
+    flex: 3;
+  }
+  
+  .offers-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333333;
+  }
+  
+  .offer-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .offer-info h3 {
+    font-size: 18px;
+    color: #ff6600;
+    margin-bottom: 5px;
+  }
+  
+  .offer-info p {
+    font-size: 14px;
+    color: #555555;
+    margin: 2px 0;
+  }
+  
+  .apply-button {
+    background-color: #6a1b9a;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .apply-button:hover {
+    background-color: #4a0072;
+  }
+  

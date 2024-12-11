@@ -1,0 +1,10 @@
+.dashboard-page {
+    display: flex;
+    font-family: Arial, sans-serif;
+  }
+  
+  .main-content {
+    width: 75%;
+    padding: 20px;
+  }
+  
