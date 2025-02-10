@@ -1,87 +1,85 @@
 .howto-container {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    margin-top: 80px;
-  }
-  .steps{
-    display: flex;
-  }
-  
-  .howto-title {
-    text-align: center;
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .howto-subtitle {
-    text-align: center;
-    font-size: 16px;
-    font-weight: normal;
-    margin-bottom: 40px;
-    color: #777;
-  }
-  
-  .howto-steps {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .howto-step {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .howto-step-number {
-    font-size: 32px;
-    font-weight: bold;
-    color: #6a1b9a;
-    width: 50px;
-    text-align: center;
-  }
-  
-  .howto-step-content {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .howto-step-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0;
-    color: #333;
-  }
-  
-  .howto-step-description {
-    font-size: 14px;
-    color: #555;
-    margin: 5px 0 0;
-  }
-  
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  margin-top: 80px;
+}
+.steps {
+  display: flex;
+}
 
-  /* Style pour les boutons */
+.howto-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.howto-subtitle {
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 40px;
+  color: #777;
+}
+
+.howto-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.howto-step {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.howto-step-number {
+  font-size: 32px;
+  font-weight: bold;
+  color: #6a1b9a;
+  width: 50px;
+  text-align: center;
+}
+
+.howto-step-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.howto-step-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.howto-step-description {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0 0;
+}
+
+/* Style pour les boutons */
 .howto-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 80px;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  gap: 20px;
+}
 
-  }
-  
-  .howto-button {
-    background-color: #6a1b9a;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .howto-button:hover {
-    background-color: #4a0072;
-  }
+.howto-button {
+  background-color: #6a1b9a;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.howto-button:hover {
+  background-color: #4a0072;
+}

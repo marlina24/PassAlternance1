@@ -1,44 +1,42 @@
 .profile-header {
-    background-color: #6a1b9a;
-    padding: 40px;
-    text-align: center;
-    color: #ffffff;
-  }
-  
-  .profile-header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .user-avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 3px solid #ffffff;
-  }
-  
-  .user-info h1 {
-    font-size: 24px;
-    margin-bottom: 5px;
-  }
-  
-  .user-info p {
-    margin: 5px 0;
-  }
-  
-  .public-profile-btn {
-    background-color: #ffffff;
-    color: #6a1b9a;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .public-profile-btn:hover {
-    background-color: #f3e6f8;
-  }
-  
+  background-color: #6a1b9a;
+  padding: 40px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.profile-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.user-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+}
+.user-info h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.user-info p {
+  margin: 5px 0;
+}
+
+.public-profile-btn {
+  background-color: #ffffff;
+  color: #6a1b9a;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.public-profile-btn:hover {
+  background-color: #f3e6f8;
+}

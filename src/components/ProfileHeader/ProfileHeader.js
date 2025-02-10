@@ -1,16 +1,22 @@
 import React from "react";
 import "./ProfileHeader.css";
-import userAvatar from "../../assets/avatar2.jpg"; // Remplacez par votre image réelle
+import avatar from "../../assets/avatar2.jpg";
 
-const ProfileHeader = () => {
+const ProfileHeader = ({ user }) => {
   return (
     <header className="profile-header">
       <div className="profile-header-container">
-        <img src={userAvatar} alt="User Avatar" className="user-avatar" />
+        <img
+          src={user.avatar || { avatar }} // Avatar par défaut si non défini
+          alt="User Avatar"
+          className="user-avatar"
+        />
         <div className="user-info">
-          <h1>Marlina Victor</h1>
+          <h1>{user.name}</h1>
           <p>⭐ 4.5 - Fiabilité : 100%</p>
-          <button className="public-profile-btn">Visualiser mon profil public</button>
+          <button className="public-profile-btn">
+            Visualiser mon profil public
+          </button>
         </div>
       </div>
     </header>

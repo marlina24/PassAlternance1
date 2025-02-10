@@ -8,11 +8,11 @@ import ContactUs from "../components/ContactUs/ContactUs";
 function HomePage() {
   return (
     <div className="homepage">
-      <Hero/>
-      <APropos/>
-      <HowTo/>
-      <Testimonials/>
-      <ContactUs/>
+      <Hero />
+      <APropos />
+      <HowTo />
+      <Testimonials />
+      <ContactUs />
     </div>
   );
 }

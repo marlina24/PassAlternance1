@@ -9,7 +9,10 @@ import SearchOffersPage from "./pages/SearchOffersPage";
 import PublishOfferPage from "./pages/PublishOfferPage";
 import ProfilePage from "./pages/ProfilePage";
 import NotFoundPage from "./pages/NotFoundPage";
-import './App.css'
+import SignupPage from "./pages/SignupPage";
+import PrivateRoute from "./components/PrivateRoute";
+import './App.css';
+
 
 function App() {
   return (
@@ -19,10 +22,32 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/signup" element={<SignupPage />} />
           <Route path="/search-offers" element={<SearchOffersPage />} />
-          <Route path="/publish-offer" element={<PublishOfferPage />} />
-          <Route path="/profile" element={<ProfilePage />} />
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRoute>
+                <DashboardPage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/publish-offer"
+            element={
+              <PrivateRoute>
+                <PublishOfferPage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <PrivateRoute>
+                <ProfilePage />
+              </PrivateRoute>
+            }
+          />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
@@ -30,5 +55,6 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;

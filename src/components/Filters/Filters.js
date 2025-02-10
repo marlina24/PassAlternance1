@@ -1,58 +1,66 @@
 import React, { useState } from "react";
 import "./Filters.css";
 
-const Filters = () => {
-  const [salaryRange, setSalaryRange] = useState(0);
-  const [radius, setRadius] = useState(50);
-  const [jobType, setJobType] = useState("");
 
-  const handleSalaryChange = (event) => setSalaryRange(event.target.value);
-  const handleRadiusChange = (event) => setRadius(event.target.value);
-  const handleJobTypeChange = (event) => setJobType(event.target.value);
+const Filters = ({ onFiltersChange }) => {
+  const [search, setSearch] = useState("");
+  const [minSalary, setMinSalary] = useState(0);
+  const [type, setType] = useState("");
+
+
+  const handleSearch = () => {
+    onFiltersChange({ search, minSalary: parseInt(minSalary, 10), type }); // Conversion explicite
+  };
+
+
+  const resetFilters = () => {
+    setSearch("");
+    setMinSalary(0);
+    setType("");
+    onFiltersChange({ search: "", minSalary: 0, type: "" });
+  };
+
 
   return (
-    <aside className="filters-section">
-      <h2>Filtres</h2>
-      <div className="filter-group">
-        <label htmlFor="salaryRange">Salaire minimum (€):</label>
+    <div className="filters">
+      <label>
+        Recherche :
+        <input
+          type="text"
+          placeholder="Rechercher un poste"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </label>
+      <label>
+        Salaire minimum (€) :
         <input
           type="range"
-          id="salaryRange"
           min="0"
           max="5000"
-          value={salaryRange}
-          onChange={handleSalaryChange}
+          step="100"
+          value={minSalary}
+          onChange={(e) => setMinSalary(e.target.value)}
         />
-        <span>{salaryRange} €</span>
-      </div>
-
-      <div className="filter-group">
-        <label htmlFor="radius">Rayon (km):</label>
-        <input
-          type="range"
-          id="radius"
-          min="10"
-          max="200"
-          value={radius}
-          onChange={handleRadiusChange}
-        />
-        <span>{radius} km</span>
-      </div>
-
-      <div className="filter-group">
-        <label htmlFor="jobType">Type d'alternance:</label>
-        <select id="jobType" value={jobType} onChange={handleJobTypeChange}>
+        <span>{minSalary} €</span>
+      </label>
+      <label>
+        Type d'alternance :
+        <select value={type} onChange={(e) => setType(e.target.value)}>
           <option value="">Tous les types</option>
-          <option value="IT">Développeur</option>
-          <option value="marketing">Marketing</option>
-          <option value="finance">Finance</option>
-          <option value="design">Design</option>
+          <option value="stage">Stage</option>
+          <option value="apprentissage">Apprentissage</option>
         </select>
-      </div>
-
-      <button className="reset-filters-button">Réinitialiser les filtres</button>
-    </aside>
+      </label>
+      <button onClick={resetFilters} className="reset-button">
+        Réinitialiser les filtres
+      </button>
+      <button onClick={handleSearch} className="apply-button">
+        Appliquer les filtres
+      </button>
+    </div>
   );
 };
+
 
 export default Filters;

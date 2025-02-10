@@ -1,51 +1,57 @@
-.qualities-section {
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .qualities-section h2 {
-    font-size: 20px;
-    color: #6a1b9a;
-    margin-bottom: 10px;
-  }
-  
-  .qualities-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .quality {
-    padding: 10px;
-    background-color: #6a1b9a;
-    color: white;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .quality button {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    margin-left: 5px;
-  }
-  
-  .add-quality-button {
-    padding: 10px 20px;
-    background-color: #6a1b9a;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .add-quality-button:hover {
-    background-color: #5a1381;
-  }
-  
+.qualities-section,
+.wishes-section {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.qualities-section h2,
+.wishes-section h2 {
+  font-size: 20px;
+  color: #6a1b9a;
+  margin-bottom: 10px;
+}
+
+.qualities-list,
+.wishes-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.quality,
+.wish {
+  padding: 10px;
+  background-color: #6a1b9a;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.quality button,
+.wish button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.add-quality-button,
+.add-wish-button {
+  padding: 10px 20px;
+  background-color: #6a1b9a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-quality-button:hover,
+.add-wish-button:hover {
+  background-color: #5a1381;
+}

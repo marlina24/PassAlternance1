@@ -1,8 +1,17 @@
-.search-offers-page {
-    font-family: Arial, sans-serif;
+.search-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 20px;
 }
 
-.search-content {
-    display: flex;
-    padding: 20px;
+.search-offers-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.offers {
+  flex: 1;
 }

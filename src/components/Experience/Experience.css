@@ -6,17 +6,20 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
 .experience-section h2 {
   font-size: 20px;
   color: #6a1b9a;
   margin-bottom: 10px;
 }
 
+
 .experience-list {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
+
 
 .experience-card {
   padding: 15px;
@@ -25,15 +28,18 @@
   border: 1px solid #dddddd;
 }
 
+
 .experience-card h3 {
   font-size: 16px;
   color: #333333;
 }
 
+
 .experience-card p {
   font-size: 14px;
   color: #555555;
 }
+
 
 .add-button {
   margin-top: 15px;
@@ -45,9 +51,11 @@
   cursor: pointer;
 }
 
+
 .add-button:hover {
   background-color: #5a1381;
 }
+
 
 /* Popup Styles */
 .popup-overlay {
@@ -63,6 +71,7 @@
   z-index: 999;
 }
 
+
 .popup {
   background: white;
   padding: 20px;
@@ -77,21 +86,25 @@
   color: #6a1b9a;
 }
 
+
 .popup input {
   width: 90%;
   padding: 10px;
-  margin-right: 10px; 
+  margin-right: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-bottom: 10px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
+
+
 
 
 .popup-buttons {
   display: flex;
   justify-content: space-between;
 }
+
 
 .confirm-button {
   padding: 10px 20px;
@@ -102,9 +115,11 @@
   cursor: pointer;
 }
 
+
 .confirm-button:hover {
   background-color: #5a1381;
 }
+
 
 .cancel-button {
   padding: 10px 20px;
@@ -113,6 +128,7 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
 
 .cancel-button:hover {
   background-color: #bbb;
