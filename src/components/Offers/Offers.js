@@ -73,6 +73,12 @@ const Offers = ({ offers = [] }) => {
             <p>
               <strong>Description:</strong> {selectedOffer.description}
             </p>
+            <p>
+              <strong>Lien</strong> :{" "}
+              <a href="https://sas-kalliste.fr">
+                Partagez votre candidature spontané!
+              </a>
+            </p>
             <button
               className="add-favorite-button"
               onClick={() => addToFavorites(selectedOffer.id)}

@@ -69,18 +69,12 @@ const Formation = () => {
         throw new Error("Erreur lors de l'ajout.");
       }
 
-      const newItem = await response.json();
+      const newItem = await response.json(); // Récupération de l'élément ajouté
 
       if (popupType === "diploma") {
-        setDiplomas((prev) => [
-          ...prev,
-          { id: newItem.id, name: newItem.diploma },
-        ]);
+        setDiplomas((prev) => [...prev, { id: newItem.id, name: inputValue }]); // Mise à jour immédiate
       } else {
-        setLanguages((prev) => [
-          ...prev,
-          { id: newItem.id, name: newItem.language },
-        ]);
+        setLanguages((prev) => [...prev, { id: newItem.id, name: inputValue }]);
       }
 
       setInputValue("");
@@ -133,7 +127,6 @@ const Formation = () => {
     setItemToDelete(id);
     setDeleteConfirmation(true);
   };
-
   return (
     <section className="formation-section">
       <h2>Formation</h2>
