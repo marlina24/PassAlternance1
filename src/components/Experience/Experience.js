@@ -103,11 +103,16 @@ const Experience = ({ userId, experiences, onUpdateExperiences }) => {
     }
     setShowPopup(true);
   };
+
   const closePopup = () => {
     setShowPopup(false);
     setNewExperience({ job: "", duration: "", rate: "" });
     setEditIndex(null);
   };
+
+  useEffect(() => {
+    setLocalExperiences(experiences);
+  }, [experiences]);
 
   return (
     <section className="experience-section">

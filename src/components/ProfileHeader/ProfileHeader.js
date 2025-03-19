@@ -7,8 +7,14 @@ const ProfileHeader = ({ user }) => {
     <header className="profile-header">
       <div className="profile-header-container">
         <div className="user-info">
-          <h1>{user.name}</h1>
-          <p>⭐ 4.5 - Fiabilité : 100%</p>
+          <b>
+            <span>
+              {user.first_name} {user.name}
+            </span>
+          </b>
+          <p className="registration-date">
+            Inscrit depuis le : {new Date(user.created_at).toLocaleDateString()}
+          </p>
         </div>
       </div>
     </header>

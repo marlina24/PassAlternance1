@@ -10,7 +10,6 @@ const Qualities = ({ qualities = [], userId, token }) => {
       alert("Veuillez entrer une qualité valide.");
       return;
     }
-
     try {
       const response = await fetch(
         `http://localhost:3002/api/profile/${userId}/qualities`,
@@ -53,9 +52,7 @@ const Qualities = ({ qualities = [], userId, token }) => {
         `http://localhost:3002/api/profile/${userId}/qualities/${qualityId}`,
         {
           method: "DELETE",
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
+          headers: { Authorization: `Bearer ${token}` },
         }
       );
 

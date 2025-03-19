@@ -18,6 +18,7 @@ const ProfilePage = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     const userId = localStorage.getItem("userId");
+
     if (!token || !userId) {
       navigate("/login"); // Redirige vers la page de connexion si l'utilisateur n'est pas connecté
       return;
@@ -37,6 +38,7 @@ const ProfilePage = () => {
           throw new Error("Erreur lors du chargement du profil");
         }
         const data = await response.json();
+        console.log("mash normal", data);
         setProfileData(data);
       } catch (err) {
         setError(err.message);
@@ -84,6 +86,8 @@ const ProfilePage = () => {
   const handleUpdateProfile = async (formData) => {
     const token = localStorage.getItem("token");
     const userId = localStorage.getItem("userId");
+    console.log("User ID Stocké :", localStorage.getItem("userId"));
+    console.log("Token Stocké :", localStorage.getItem("token"));
 
     try {
       const response = await fetch(
@@ -126,18 +130,18 @@ const ProfilePage = () => {
       <ProfileDetails user={profileData.user} onUpdate={handleUpdateProfile} />
       <Wishes
         wishes={profileData.wishes}
-        userId={profileData.user.id}
+        userId={localStorage.getItem("userId")}
         token={localStorage.getItem("token")}
       />
       <Qualities
         qualities={profileData.qualities}
-        userId={profileData.user.id}
+        userId={localStorage.getItem("userId")}
         token={localStorage.getItem("token")}
       />
       <Formation formations={profileData.formations} />
       <SocialMedia socialLinks={profileData.socialLinks} />
       <Experience
-        userId={profileData.user.id}
+        userId={localStorage.getItem("userId")} // ✅ utilise localStorage directement
         experiences={profileData.experiences || []}
         onUpdateExperiences={handleUpdateExperiences}
       />

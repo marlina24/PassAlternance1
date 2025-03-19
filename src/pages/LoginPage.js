@@ -28,8 +28,9 @@ function LoginPage() {
       if (response.ok) {
         setMessage("Connexion réussie !");
         localStorage.setItem("token", data.token); // Stocker le token
-        localStorage.setItem("userId", data.userId); // Stocke l'ID utilisateur
-        navigate("/profile"); // Rediriger vers la page de profil
+        localStorage.setItem("userId", data.user.id); // Stocke l'ID utilisateur
+        console.log("useeeeeeeeeeerrr", data.user.id);
+        navigate("/search-offers"); // Rediriger vers la page de profil
       } else {
         setMessage(data.message || "Erreur lors de la connexion.");
       }
@@ -40,7 +41,7 @@ function LoginPage() {
 
   return (
     <div className="login-page">
-      <h2>Connexion</h2>
+      <h2>CONNEXION</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="email"

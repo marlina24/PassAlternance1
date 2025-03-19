@@ -1,111 +1,105 @@
 /* Section principale */
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 100px;
-    background-color: #ffffff;
-    position: relative;
-    margin-bottom: 100px;
-    margin-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 100px;
+  position: relative;
+  margin-bottom: 100px;
+  margin-top: 200px;
+  background-color: #f68133;
+}
+
+/* Shape fluide */
+.fluid-shape {
+  position: absolute;
+  width: 900px;
+  height: 400px;
+  background: #ff6600;
+  border-radius: 50% 30% 40% 70%; /* Forme irrégulière */
+  top: 50px;
+  left: 200px; /* Partant de gauche à droite */
+  z-index: 1;
+  transform: rotate(10deg);
+}
+
+.hero-card h2 {
+  font-size: 1rem;
+  color: #ff6600; /* Couleur orange */
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-card h1 {
+  font-size: 2.5rem;
+  color: #000000; /* Noir */
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.hero-card p {
+  font-size: 0.9rem;
+  color: #555555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 20px;
   }
-  
-  /* Shape fluide */
+
+  .hero-card {
+    max-width: 90%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .hero-image-container {
+    margin-top: 20px;
+  }
+
+  .hero-image {
+    width: 300px;
+    height: 300px;
+  }
+
   .fluid-shape {
-    position: absolute;
-    width: 900px;
-    height: 400px;
-    background: #ff6600;
-    border-radius: 50% 30% 40% 70%; /* Forme irrégulière */
-    top: 50px;
-    left: 200px; /* Partant de gauche à droite */
-    z-index: 1;
-    transform: rotate(10deg);
+    width: 400px;
+    height: 300px;
+    left: -50px;
+    top: 100px;
   }
-  
-
-  
-  .hero-card h2 {
-    font-size: 1rem;
-    color: #ff6600; /* Couleur orange */
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .hero-card h1 {
-    font-size: 2.5rem;
-    color: #000000; /* Noir */
-    font-weight: bold;
-    line-height: 1.4;
-    margin-bottom: 20px;
-  }
-  
-  .hero-card p {
-    font-size: 0.9rem;
-    color: #555555;
-  }
-
-  
-  
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .hero {
-      flex-direction: column;
-      padding: 20px;
-    }
-  
-    .hero-card {
-      max-width: 90%;
-      margin: 0;
-      text-align: center;
-    }
-  
-    .hero-image-container {
-      margin-top: 20px;
-    }
-  
-    .hero-image {
-      width: 300px;
-      height: 300px;
-    }
-  
-    .fluid-shape {
-      width: 400px;
-      height: 300px;
-      left: -50px;
-      top: 100px;
-    }
-  }
-  
+}
 
 .hero-image-container {
-flex: 1;
-position: relative;
-display: flex;
-justify-content: center;
-align-items: center;
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-image {
-    width: 500px;
-    height: auto;
-    border-radius: 50%; /* Image circulaire */
-    position: absolute; /* Positionnement absolu */
-    z-index: 2; /* Sous la carte */
-    top: -400px; /* Ajustez la position verticale */
-    right: 200px; /* Ajustez la position horizontale */
+  width: 500px;
+  height: auto;
+  border-radius: 50%; /* Image circulaire */
+  position: absolute; /* Positionnement absolu */
+  z-index: 2; /* Sous la carte */
+  top: -400px; /* Ajustez la position verticale */
+  right: 200px; /* Ajustez la position horizontale */
 }
 
 .hero-card {
-    flex: 1;
-    max-width: 40%;
-    background-color: #ffffff;
-    padding: 20px 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 3; /* Toujours au-dessus du shape fluide et de l'image */
-    margin-left: 50px; 
+  flex: 1;
+  max-width: 40%;
+  background-color: #ffffff;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 3; /* Toujours au-dessus du shape fluide et de l'image */
+  margin-left: 50px;
 }

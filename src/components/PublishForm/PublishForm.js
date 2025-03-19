@@ -8,24 +8,64 @@ const PublishForm = () => {
     location: "",
     salary: "",
     description: "",
+    lien: "", // Ajout du champ lien
+    type: "",
   });
+
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
-    alert("Votre offre a été publiée avec succès !");
-    setFormData({
-      title: "",
-      company: "",
-      location: "",
-      salary: "",
-      description: "",
-    });
+
+    const userID = localStorage.getItem("userId"); // ✅ Récupération de l'ID utilisateur
+
+    if (!userID) {
+      setErrorMessage("Erreur : utilisateur non authentifié.");
+      return;
+    }
+
+    try {
+      const token = localStorage.getItem("token");
+
+      const response = await fetch("http://localhost:3002/api/offers", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ ...formData, userID }), // ✅ Ajout de userID
+      });
+
+      if (!response.ok) {
+        const errorResponse = await response.json();
+        throw new Error(
+          errorResponse.message || "Échec de la publication de l'offre."
+        );
+      }
+
+      const result = await response.json();
+      setSuccessMessage(result.message);
+      setErrorMessage("");
+
+      setFormData({
+        title: "",
+        company: "",
+        location: "",
+        salary: "",
+        description: "",
+        lien: "",
+        type: "",
+      });
+    } catch (err) {
+      setErrorMessage(err.message);
+      setSuccessMessage("");
+    }
   };
 
   return (
@@ -37,7 +77,6 @@ const PublishForm = () => {
             type="text"
             id="title"
             name="title"
-            placeholder="Ex: Développeur Web (H/F)"
             value={formData.title}
             onChange={handleChange}
             required
@@ -49,7 +88,6 @@ const PublishForm = () => {
             type="text"
             id="company"
             name="company"
-            placeholder="Ex: Tech Solutions"
             value={formData.company}
             onChange={handleChange}
             required
@@ -61,7 +99,6 @@ const PublishForm = () => {
             type="text"
             id="location"
             name="location"
-            placeholder="Ex: Paris, France"
             value={formData.location}
             onChange={handleChange}
             required
@@ -73,7 +110,6 @@ const PublishForm = () => {
             type="number"
             id="salary"
             name="salary"
-            placeholder="Ex: 1200"
             value={formData.salary}
             onChange={handleChange}
             required
@@ -84,13 +120,41 @@ const PublishForm = () => {
           <textarea
             id="description"
             name="description"
-            placeholder="Décrivez l'offre ici..."
             value={formData.description}
             onChange={handleChange}
             required
           ></textarea>
         </div>
-        <button type="submit" className="submit-button">Publier l'offre</button>
+        <div className="form-group">
+          <label htmlFor="lien">Lien de l'entreprise</label>
+          <input
+            type="url"
+            id="lien"
+            name="lien"
+            value={formData.lien}
+            onChange={handleChange}
+            placeholder="https://www.entreprise.com"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="type">Type d'offre</label>
+          <select
+            id="type"
+            name="type"
+            value={formData.type}
+            onChange={handleChange}
+            required
+          >
+            <option value="">-- Sélectionnez --</option>
+            <option value="stage">Stage</option>
+            <option value="alternance">Alternance</option>
+          </select>
+        </div>
+        <button type="submit" className="submit-button">
+          Publier l'offre
+        </button>
+        {successMessage && <p className="success-message">{successMessage}</p>}
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
       </form>
     </section>
   );

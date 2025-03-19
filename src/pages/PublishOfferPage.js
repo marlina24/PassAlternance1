@@ -6,7 +6,10 @@ const PublishOfferPage = () => {
   return (
     <div className="publish-offer-page">
       {/* En-tête */}
-      <HeaderPageOffre title="Publier une Offre" subtitle="Publiez une offre d'alternance pour aider les étudiants." />
+      <HeaderPageOffre
+        title="Publier une Offre"
+        subtitle="Publiez une offre d'alternance pour aider les étudiants."
+      />
 
       {/* Formulaire de publication */}
       <PublishForm />

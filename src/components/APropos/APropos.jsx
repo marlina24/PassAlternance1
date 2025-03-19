@@ -1,6 +1,9 @@
 import React from "react";
 import "./APropos.css"; // Ajoutez le style correspondant ici
-import image1 from "../../assets/image1.jpg";
+import image1 from "../../assets/imagelivres.png";
+import image2 from "../../assets/imageh1.png";
+import image3 from "../../assets/imagef2.png";
+
 import image4 from "../../assets/avatar4.jpg";
 const Apropos = () => {
   return (
@@ -12,15 +15,13 @@ const Apropos = () => {
         <div className="apropos-text">
           <h2>Notre mission</h2>
           <p>
-            Chez Pass'Alternance, notre mission est de faciliter l’accès aux
-            contrats d’alternance en offrant aux anciens apprentis la
-            possibilité de partager les entreprises qu’ils quittent. Grâce à ce
-            réseau solidaire, nous permettons aux futurs étudiants de découvrir
-            des opportunités concrètes et adaptées à leurs besoins.
+            Pass'Alternance connecte les anciens et futurs apprentis en
+            partageant les entreprises libérant des postes, facilitant ainsi
+            l’accès aux contrats en alternance.
           </p>
           <a href="#" className="apropos-link"></a>
         </div>
-        <img src={image4} alt="Books" className="apropos-image" />
+        <img src={image2} alt="Books" className="apropos-image" />
       </div>
 
       {/* Ligne 2: Texte à gauche, image à droite */}
@@ -28,22 +29,19 @@ const Apropos = () => {
         <div className="apropos-text">
           <h2>Nos valeurs</h2>
           <p>
-            Solidarité : Favoriser l’entraide entre étudiants pour simplifier la
-            recherche d’alternance. Simplicité : Offrir une plateforme intuitive
-            et efficace. Transparence : Garantir des informations claires et
-            précises sur les postes.
+            Nos valeurs reposent sur la solidarité, en favorisant l’entraide
+            étudiante, la simplicité, avec une plateforme intuitive, et la
+            transparence, en garantissant des informations fiables.
           </p>
           <a href="#" className="apropos-link"></a>
         </div>
-        <img src={image1} alt="Smiling Woman" className="apropos-image" />
+        <img src={image3} alt="Smiling Woman" className="apropos-image" />
         <div className="apropos-text">
           <h2>Pourquoi choisir Pass'Alternance?</h2>
           <p>
-            Avec Pass'Alternance, chaque opportunité publiée provient d’un
-            ancien étudiant ayant achevé son contrat. Ce partage proactif
-            favorise une transmission directe et efficace des postes, tout en
-            bâtissant un réseau collaboratif où chacun joue un rôle actif dans
-            l’accompagnement des nouvelles générations d’apprentis.
+            Chaque offre provient d’un ancien apprenti, assurant une
+            transmission directe des postes et un réseau collaboratif pour
+            soutenir les nouvelles générations.
           </p>
           <a href="#" className="apropos-link"></a>
         </div>

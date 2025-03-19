@@ -1,65 +1,160 @@
+/* Effet d'apparition général */
 .testimonials-container {
-    padding: 60px 20px;
-    text-align: center;
-    border-radius: 10px;
-    margin-top: 80px;
-    position: relative;
-    overflow: hidden;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 80px;
+  position: relative;
+  overflow: hidden;
+  background: #f9f9f9;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
 }
 
-.testimonials-title {
-    font-size: 32px;
-    font-weight: bold;
-    color: #ff6600;
-    margin-bottom: 10px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.testimonials-subtitle {
-    font-size: 16px;
-    color: #555555;
-    margin-bottom: 40px;
-}
-
+/* Apparition fluide et effets variés */
 .testimonials-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .testimonial-card {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    text-align: center;
-    position: relative;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  max-width: 320px;
+  text-align: center;
+  position: relative;
+  opacity: 0;
 }
 
+/* Effets variés pour chaque témoignage */
+.testimonial-card:nth-child(1) {
+  background-color: #fce4ec; /* Rose pâle */
+  animation: slideUp 3s ease-out forwards;
+  animation-delay: 0s;
+}
+
+.testimonial-card:nth-child(2) {
+  background-color: #e3f2fd; /* Bleu pastel */
+  animation: fadeInScale 3s ease-out forwards;
+  animation-delay: 5s;
+}
+
+.testimonial-card:nth-child(3) {
+  background-color: #e8f5e9; /* Vert tendre */
+  animation: rotateIn 3s ease-out forwards;
+  animation-delay: 10s;
+}
+
+.testimonial-card:nth-child(4) {
+  background-color: #fff9c4; /* Jaune clair */
+  animation: flipIn 3s ease-out forwards;
+  animation-delay: 15s;
+}
+
+/* Slide du bas vers le haut */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Zoom-in fluide */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Rotation douce */
+@keyframes rotateIn {
+  0% {
+    opacity: 0;
+    transform: rotate(-10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+
+/* Flip vertical */
+@keyframes flipIn {
+  0% {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+/* Effet subtil au survol */
+.testimonial-card:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Effet léger sur l’avatar */
 .testimonial-avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    border: 3px solid #ff6600;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card:hover .testimonial-avatar {
+  transform: scale(1.08);
+}
+
+/* Apparition progressive des textes */
+.testimonial-name,
+.testimonial-role,
+.testimonial-text {
+  opacity: 0;
+  animation: fadeInText 2s ease-out forwards;
 }
 
 .testimonial-name {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333333;
-    margin: 10px 0 5px;
+  animation-delay: 1s;
 }
-
 .testimonial-role {
-    font-size: 14px;
-    color: #777777;
-    margin-bottom: 15px;
+  animation-delay: 2s;
+}
+.testimonial-text {
+  animation-delay: 3s;
 }
 
-.testimonial-text {
-    font-size: 14px;
-    color: #555555;
-    line-height: 1.6;
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

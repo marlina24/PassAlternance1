@@ -1,44 +1,82 @@
+/* Conteneur principal de la page de connexion */
 .login-page {
   max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
-  background: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 60px auto;
+  padding: 25px;
+  background: linear-gradient(135deg, #f9f9f9, #ffffff);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
 }
 
+/* Animation d'apparition fluide */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Titre */
 .login-page h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #6a1b9a;
 }
 
+/* Formulaire */
 .login-page form {
   display: flex;
   flex-direction: column;
 }
 
+/* Champs de saisie */
 .login-page input {
-  padding: 10px;
+  padding: 12px;
   margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s, box-shadow 0.3s;
 }
 
+/* Effet au focus */
+.login-page input:focus {
+  border: 1px solid #6a1b9a;
+  box-shadow: 0 0 10px rgba(106, 27, 154, 0.3);
+  outline: none;
+}
+
+/* Bouton de connexion */
 .login-page button {
-  padding: 10px;
-  background-color: #6a1b9a;
+  padding: 12px;
+  background: linear-gradient(135deg, #6a1b9a, #4f1178);
   color: white;
+  font-size: 16px;
+  font-weight: bold;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
 }
 
+/* Effet hover du bouton */
 .login-page button:hover {
-  background-color: #4f1178;
+  background: linear-gradient(135deg, #4f1178, #360b52);
+  transform: scale(1.05);
 }
 
+/* Message d'erreur ou d'information */
 .message {
   text-align: center;
   color: #ff6600;
   margin-top: 10px;
+  font-size: 14px;
 }

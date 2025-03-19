@@ -1,10 +1,29 @@
+/* === Animation d’apparition fluide === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* === Conteneur principal du tableau de bord === */
 .dashboard-page {
-    display: flex;
-    font-family: Arial, sans-serif;
-  }
-  
-  .main-content {
-    width: 75%;
-    padding: 20px;
-  }
-  
+  display: flex;
+  font-family: Arial, sans-serif;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* === Contenu principal avec transition douce === */
+.main-content {
+  width: 75%;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Effet hover léger */
+.main-content:hover {
+  transform: scale(1.01);
+}

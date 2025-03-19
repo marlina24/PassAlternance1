@@ -1,48 +1,53 @@
 .sidebar {
-    width: 25%;
-    background-color: #f4f4f4;
-    padding: 20px;
-    text-align: center;
-    border-right: 1px solid #ddd;
-  }
-  
-  .profile-picture {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-  }
-  
-  .sidebar h2 {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-  
-  .sidebar p {
-    margin: 5px 0;
-    color: #555;
-  }
-  
-  .jobs-section {
-    margin-top: 20px;
-    text-align: left;
-  }
-  
-  .jobs-section h3 {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .jobs-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .jobs-list li {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 5px;
-  }
-  
+  width: 25%;
+  background-color: #f5863b;
+  padding: 20px;
+  text-align: center;
+  border-right: 1px solid #ddd;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.sidebar p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.jobs-section {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.jobs-section h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.jobs-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.jobs-list li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

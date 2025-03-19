@@ -39,9 +39,6 @@ function Header() {
           ) : (
             <>
               <li>
-                <Link to="/search-offers">Rechercher</Link>
-              </li>
-              <li>
                 <Link to="/login">Se Connecter</Link>
               </li>
               <li>

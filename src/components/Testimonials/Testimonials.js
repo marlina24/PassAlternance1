@@ -1,59 +1,74 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./Testimonials.css";
-import avatar1 from "../../assets/avatar1.png"; // Image d'avatar 1
-import avatar2 from "../../assets/avatar2.jpg"; // Image d'avatar 2
-import avatar3 from "../../assets/avatar3.jpg"; // Image d'avatar 3
+import avatar1 from "../../assets/avatar1.png";
+import avatar2 from "../../assets/avatar2.jpg";
+import avatar3 from "../../assets/avatar3.jpg";
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 1, ease: "easeOut" },
+  },
+  whileHover: {
+    scale: 1.05,
+    boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
+    transition: { duration: 0.3 },
+  },
+};
 
 const Testimonials = () => {
   return (
     <div className="testimonials-container">
-      <h1 className="testimonials-title">
-        Leurs expériences avec Pass'Alternance
-      </h1>
+      <h1 className="testimonials-title">Ce que disent nos utilisateurs</h1>
       <p className="testimonials-subtitle">
-        Découvrez comment Pass'Alternance a aidé nos étudiants à atteindre leurs
-        objectifs de carrière.{" "}
+        Découvrez comment Pass'Alternance a aidé nos utilisateurs à atteindre
+        leurs objectifs professionnels.
       </p>
       <div className="testimonials-cards">
-        <div className="testimonial-card">
-          <img
-            src={avatar1}
-            alt="Avatar utilisateur"
-            className="testimonial-avatar"
-          />
-          <h3 className="testimonial-name">Sarah L.</h3>
-          <p className="testimonial-role">Étudiante en alternance</p>
-          <p className="testimonial-text">
-            "Grâce à Pass'Alternance, j'ai pu trouver une entreprise en
-            seulement une semaine. Une plateforme indispensable !"
-          </p>
-        </div>
-        <div className="testimonial-card">
-          <img
-            src={avatar2}
-            alt="Avatar utilisateur"
-            className="testimonial-avatar"
-          />
-          <h3 className="testimonial-name">Mehdi K.</h3>
-          <p className="testimonial-role">Développeur junior</p>
-          <p className="testimonial-text">
-            "Une expérience incroyable ! Pass'Alternance m'a permis de préparer
-            mon CV et de décrocher mon premier poste."
-          </p>
-        </div>
-        <div className="testimonial-card">
-          <img
-            src={avatar3}
-            alt="Avatar utilisateur"
-            className="testimonial-avatar"
-          />
-          <h3 className="testimonial-name">Lina A.</h3>
-          <p className="testimonial-role">Manager RH</p>
-          <p className="testimonial-text">
-            "Pass'Alternance m'a aidée à trouver des candidats motivés et bien
-            préparés pour rejoindre notre équipe."
-          </p>
-        </div>
+        {[
+          {
+            img: avatar2,
+            name: "Sarah M.",
+            role: "Étudiante en alternance",
+            text: "Grâce à Pass'Alternance, j'ai pu trouver une entreprise en seulement une semaine. Une plateforme indispensable !",
+          },
+          {
+            img: avatar1,
+            name: "Maxime L.",
+            role: "Développeur junior",
+            text: "Une expérience incroyable ! Pass'Alternance m'a permis de préparer mon CV et de décrocher mon premier poste.",
+          },
+          {
+            img: avatar3,
+            name: "Lina A.",
+            role: "Manager RH",
+            text: "Pass'Alternance m'a aidée à trouver des candidats motivés et bien préparés pour rejoindre notre équipe.",
+          },
+        ].map((testimonial, index) => (
+          <motion.div
+            key={index}
+            className="testimonial-card"
+            variants={cardVariants}
+            whileHover="whileHover"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: index * 0.3 }}
+          >
+            <img
+              src={testimonial.img}
+              alt="Avatar utilisateur"
+              className="testimonial-avatar"
+            />
+            <h3 className="testimonial-name">{testimonial.name}</h3>
+            <p className="testimonial-role">{testimonial.role}</p>
+            <p className="testimonial-text">{testimonial.text}</p>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
