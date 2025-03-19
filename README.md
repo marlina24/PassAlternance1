@@ -1,70 +1,59 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🚀 Pass'Alternance – Plateforme d'opportunités pour alternants  
 
-## Available Scripts
+## 📌 Description  
+**Pass'Alternance** est une plateforme qui facilite l'accès aux contrats d'alternance en permettant aux étudiants de partager les opportunités qu'ils libèrent à la fin de leur contrat. L'objectif est de **créer un réseau solidaire** où les anciens alternants transmettent leurs postes aux futurs candidats, optimisant ainsi la recherche d'alternance.
 
-In the project directory, you can run:
+## 🎯 Fonctionnalités principales  
+- ✅ **Inscription rapide** : Créez un compte et accédez immédiatement aux offres.  
+- ✅ **Consultation des offres** : Parcourez les opportunités disponibles et postulez en un clic.  
+- ✅ **Partage d’offres** : Déposez une annonce pour informer les autres étudiants des postes à pourvoir.  
+- ✅ **Mise en réseau** : Connectez-vous avec d'anciens alternants et entreprises.  
 
-### `npm start`
+## 🛠 Technologies utilisées  
+- **Frontend** : React.js, TailwindCSS  
+- **Backend** : Node.js, Express.js  
+- **Base de données** : MongoDB  
+- **Authentification** : Firebase/Auth0  
+- **Déploiement** : Vercel  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🔧 Installation et démarrage du projet  
+### 📥 Cloner le projet  
+```bash
+git clone https://github.com/ton-repo/pass-alternance.git
+cd pass-alternance
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 📦 Installer les dépendances  
+```bash
+npm install
+```
 
-### `npm test`
+### ▶ Lancer le projet en mode développement  
+```bash
+npm start
+```
+> 📌 **Accès au projet** : Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🚀 Build pour la production  
+```bash
+npm run build
+```
+Le projet sera optimisé et prêt à être déployé.
 
-### `npm run build`
+## 🌍 Déploiement  
+**Pass'Alternance** peut être déployé sur **Vercel** ou **Netlify** avec un simple push sur GitHub.  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📖 Documentation  
+- [React.js](https://reactjs.org/)  
+- [Node.js](https://nodejs.org/)  
+- [MongoDB](https://www.mongodb.com/)  
+- [Firebase Auth](https://firebase.google.com/)  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📩 Contact & Contribution  
+📌 **Envie de contribuer ?** Forkez le projet et proposez vos améliorations !  
+📧 **Besoin d'aide ?** Contactez-nous à `support@passalternance.com`  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+💡 **Pass'Alternance, la solution pour une alternance plus accessible !** 🚀
