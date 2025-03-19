@@ -48,12 +48,8 @@ Le projet sera optimisé et prêt à être déployé.
 - [React.js](https://reactjs.org/)  
 - [Node.js](https://nodejs.org/)  
 - [MongoDB](https://www.mongodb.com/)  
-- [Firebase Auth](https://firebase.google.com/)  
-
-## 📩 Contact & Contribution  
-📌 **Envie de contribuer ?** Forkez le projet et proposez vos améliorations !  
-📧 **Besoin d'aide ?** Contactez-nous à `support@passalternance.com`  
-
+- [Firebase Auth](https://firebase.google.com/)
+- 
 ---
 
 💡 **Pass'Alternance, la solution pour une alternance plus accessible !** 🚀
