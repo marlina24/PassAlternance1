@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./HowTo.css";
+import { Link } from "react-router-dom";
 
 const HowTo = () => {
   return (
@@ -55,8 +56,12 @@ const HowTo = () => {
       </div>
 
       <div className="howto-buttons">
-        <button className="howto-button">Je cherche une alternance</button>
-        <button className="howto-button">Je publie une offre</button>
+        <Link to="/signup" className="howto-button">
+          Je cherche une alternance
+        </Link>
+        <Link to="/signup" className="howto-button">
+          Je publie une offre
+        </Link>
       </div>
     </div>
   );
