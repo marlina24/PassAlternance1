@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Sidebar.css";
-import avatar1 from "../../assets/avatar2.jpg";
+import avatar1 from "../../assets/LOGO2.webp";
 
 const Sidebar = () => {
   const navigate = useNavigate();

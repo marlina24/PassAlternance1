@@ -1,59 +1,115 @@
 .apropos-container {
-    display: flex;
-    flex-direction: column;
-    width: 80%; /* Définit la largeur à 70% */
-    margin: 0 auto; /* Centre le conteneur horizontalement */
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
 }
+
+.apropos-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.apropos-image,
+.apropos-text {
+  flex: 1;
+  max-width: 45%;
+}
+
+.apropos-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 20px;
+  object-fit: contain;
+}
+
+.apropos-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin: 20px;
+}
+
+.apropos-text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.apropos-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.apropos-link {
+  color: #272a2e;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.apropos-link:hover {
+  text-decoration: underline;
+}
+
+.aproposTitre {
+  text-align: center;
+  color: #ff6600;
+  font-size: 45px;
+  margin-bottom: 80px;
+}
+
+/* Ajout de la responsivité */
+@media screen and (max-width: 768px) {
   .apropos-row {
-    display: flex;
-    align-items: center;
-    background-color: white;
-  }
-  
-  .apropos-image, .apropos-text {
-    flex: 1; /* Les images et les textes prennent la même largeur */
-    max-width: 50%; /* Empêche qu'une colonne dépasse 50% de la largeur */
-  }
-  
-  .apropos-image {
-    width: 300px;
-    height: auto;
-  }
-  
-  .apropos-text {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: left;
+    align-items: center;
   }
-  
-  .apropos-text h2 {
-    font-size: 24px;
-    margin-bottom: 8px;
-    margin: 20px;
-  }
-  
-  .apropos-text p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 12px;
-    margin-left: 20px;
-  }
-  
-  .apropos-link {
-    color: #272a2e;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-margin-left: 20px;
-  }
-  
-  .apropos-link:hover {
-    text-decoration: underline;
-  }
-  .aproposTitre{
+
+  .apropos-image,
+  .apropos-text {
+    max-width: 90%;
     text-align: center;
-    color: #ff6600;
-    font-size: 45px;
-    margin-bottom: 80px;
   }
+
+  .apropos-text {
+    margin: 20px 0;
+  }
+
+  .apropos-text h2 {
+    font-size: 22px;
+  }
+
+  .apropos-text p {
+    font-size: 15px;
+  }
+
+  .aproposTitre {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .aproposTitre {
+    font-size: 30px;
+  }
+
+  .apropos-text h2 {
+    font-size: 20px;
+  }
+
+  .apropos-text p {
+    font-size: 14px;
+  }
+
+  .apropos-image {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+}
